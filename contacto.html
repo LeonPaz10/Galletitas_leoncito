@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="Desde 1986 hacemos las galletitas dulces más ricas del país. Auténticos creadores de las Frolitas y pioneros en la elaboración de Pepas con mermelada de membrillo">
+  <meta name="keywords" content="GALLETITAS, PEPAS, ANEGELADAS, ANILLOS GLASEADOS, Argentina">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+  <link rel="stylesheet" href="sass/estilos.css">
+  <script src="https://kit.fontawesome.com/87d4a21cd9.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <title>Galletitas leoncito</title>
+</head>
+
+<body class="contacto">
+
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light " style="background-color: #e31b1b;
+    box-shadow: 2px 3px 25px #111;
+    height: 125px;">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/"> <img src="imagenes/ss.png" class="img-fluid" alt="logo" width="250px"> </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0 nav_personalizada">
+            <li class="nav-item">
+              <a class="nav-link active" style="color: aliceblue;" aria-current="page" href="index.html">HOME</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" style="color: aliceblue;" href="#" id="navbarDropdownMenuLink"
+                role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                EMPRESA
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <li><a class="dropdown-item" href="quienes somos.html">QUIENES SOMOS</a></li>
+                <li><a class="dropdown-item" href="vision, mision y valores.html">VISION MISION Y VALORES</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" style="color: aliceblue;" href="productos.html"> PRODUCTOS</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" style="color: aliceblue;" href="politica sgi.html">POLITICA SGI</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" style="color: aliceblue;" href="contacto.html">CONTACTO</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <br>
+
+  <section class="mapa">
+
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6278.346304042832!2d-58.831642958917705!3d-34.77549862385538!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcebf81556fcc1%3A0xe25147129610632a!2sTostadas%20Manieri!5e0!3m2!1ses!2sar!4v1618270200160!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>  
+  </section>
+
+  <div class="contact-form">
+    <form id="contact-form" action="/site/index.php/contacto" method="post" class="form-validate form-horizontal">
+      <fieldset>
+        <legend>Enviar un correo electrónico. Todos los campos con el asterisco ('*') son obligatorios.</legend>
+        <div class="control-group">
+          <div class="control-label"><label id="jform_contact_name-lbl" for="jform_contact_name" class="hasTip required" title="Nombre::Su nombre">Nombre<span class="star">&#160;*</span></label></div>
+          <div class="controls"><input type="text" name="jform[contact_name]" id="jform_contact_name" value="" class="required" size="30"/></div>
+        </div>
+        <div class="control-group">
+          <div class="control-label"><label id="jform_contact_email-lbl" for="jform_contact_email" class="hasTip required" title="Correo electrónico::Correo electrónico de contacto">Correo electrónico<span class="star">&#160;*</span></label></div>
+          <div class="controls"><input type="text" name="jform[contact_email]" class="validate-email required" id="jform_contact_email" value="" size="30"/></div>
+        </div>
+        <div class="control-group">
+          <div class="control-label"><label id="jform_contact_emailmsg-lbl" for="jform_contact_emailmsg" class="hasTip required" title="Asunto::Introduzca aquí el asunto de su mensaje.">Asunto<span class="star">&#160;*</span></label></div>
+          <div class="controls"><input type="text" name="jform[contact_subject]" id="jform_contact_emailmsg" value="" class="required" size="60"/></div>
+        </div>
+        <div class="control-group">
+          <div class="control-label"><label id="jform_contact_message-lbl" for="jform_contact_message" class="hasTip required" title="Mensaje::Introduzca aquí su mensaje.">Mensaje<span class="star">&#160;*</span></label></div>
+          <div class="controls"><textarea name="jform[contact_message]" id="jform_contact_message" cols="50" rows="10" class="required"></textarea></div>
+        </div>
+                <div class="control-group">
+            <div class="control-label"><label id="jform_contact_email_copy-lbl" for="jform_contact_email_copy" class="hasTip" title="Envíeme una copia::Se enviará una copia del mensaje a la dirección de correo electrónico que haya proporcionado.">Envíeme una copia</label></div>
+            <div class="controls"><input type="checkbox" name="jform[contact_email_copy]" id="jform_contact_email_copy" value="1"/></div>
+          </div>
+                                                                          <div class="control-group">
+                                <div class="controls">
+                                    </div>
+                            </div>
+                                <div class="form-actions"><button class="btn btn-primary validate" type="submit">Enviar</button>
+          <input type="hidden" name="option" value="com_contact" />
+          <input type="hidden" name="task" value="contact.submit" />
+          <input type="hidden" name="return" value="" />
+          <input type="hidden" name="id" value="2:manieri" />
+          <input type="hidden" name="d391cbb73a5c05aacd262e8925121d59" value="1" />			</div>
+      </fieldset>
+    </form>
+  </div>
+
+
+  </body>
+  <br>
+
+  <footer id="footer">
+
+    <section class="logoChico">
+      <img src="imagenes/ss.png" class="img-fluid" alt="logo" width="200px">
+
+    </section>
+
+    <section class="footer1">
+
+      <h3>DETALLES DE CONTACTO</h3>
+
+      <P>Avellaneda 1080 - Marcos Paz</P>
+      <P>Tel. (0220) 4775430 / 2345</P>
+
+      <a href="">
+        <P> info@galletitasleoncito.com </P>
+      </a>
+
+
+    </section>
+
+
+
+    <section class="footer2">
+
+      <h3>ATENCION AL CLIENTE</h3>
+      <P>0810-112-1219</P>
+
+      <a href="https://www.facebook.com/leon.paz.5203/"><i class="fab fa-facebook"> </i> </a>
+      <i class="fab fa-instagram"></i>
+      <i class="fab fa-twitter"></i>
+      <i class="fab fa-google-plus-g"></i>
+      <br>
+      <br>
+
+
+      <P>Copyright © 2021 Galletitas Leoncito Todos los derechos reservados</P>
+
+    </section>
+
+
+
+
+
+
+  </footer>
+
+  </html>
