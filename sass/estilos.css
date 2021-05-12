@@ -1,4 +1,4 @@
-/*variables*/
+/*header*/
 @media (min-width: 1024px) {
   .nav_personalizada {
     display: -webkit-box;
@@ -11,25 +11,192 @@
 }
 
 /* Nuestros comienzos*/
-.FondoDeAtras {
+.container-fondo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   background-image: url(http://www.galletitastrio.com.ar/assets/images/fondo_historia1.jpg);
   position: relative;
-  height: 300px;
-  padding-top: 50px;
+  height: 100%;
+  width: 100%;
+  padding-top: 5%;
+  padding-bottom: 5%;
   background-attachment: fixed;
   background-position: top center;
   background-size: cover;
 }
 
-h3.titulo {
+.container-fondo .titulo h3 {
+  color: aliceblue;
   text-align: center;
-  color: white;
+  padding-left: 30%;
+  padding-top: auto;
+  padding-bottom: auto;
+  font-size: 8vh;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
-.FondoDeAtras p {
-  margin: 10px;
-  padding: 15px;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+.container-fondo .container-parrafo p {
+  color: #e3e3e3;
+  text-align: center;
+  padding-left: 15%;
+  padding-right: 15%;
+  font-size: 18px;
+  white-space: normal;
+  padding-top: 1%;
+}
+
+@media screen and (max-width: 768px) {
+  .container-fondo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .titulo {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+    margin-right: 45%;
+    padding-bottom: 2%;
+    padding-left: 2%;
+    font-size: 15px;
+  }
+  .container-parrafo {
+    padding-top: 0,5rem;
+    padding-bottom: 5%;
+  }
+}
+
+/*variables*/
+@media (min-width: 1024px) {
+  .nav_personalizada {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    width: 100%;
+  }
+}
+
+/*Quienes somos*/
+#mainQs {
+  padding: 0px 25px 25px;
+}
+
+#mainQs .img1 {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  margin-bottom: 30px;
+  padding-top: 3%;
+}
+
+#grilla {
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 20px;
+  -ms-grid-rows: (auto)[3];
+      grid-template-rows: repeat(3, auto);
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-areas: "textoQsomos imagenDerecha" "imagenIzquierda responsabilidad" "parrafo2 parrafo2";
+}
+
+section#textoQsomos {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: textoQsomos;
+  margin-left: 8%;
+  font-size: 15px;
+}
+
+section#imagenDerecha {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: imagenDerecha;
+  text-align: center;
+  padding-top: 23%;
+}
+
+section#responsabilidad {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: responsabilidad;
+  padding-top: 10%;
+  font-size: 15px;
+  padding-right: 8%;
+}
+
+section#responsabilidad > h1 {
+  border: 2px solid red;
+  font-size: 30px;
+}
+
+section#imagenIzquierda {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: imagenIzquierda;
+  padding-left: 5%;
+  padding-top: 8%;
+}
+
+section#parrafo2 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: parrafo2;
+  padding-bottom: 3%;
+  padding-left: 8%;
+  padding-right: 8%;
+  font-size: 15px;
+  padding-top: 2%;
+}
+
+@media screen and (max-width: 768px) {
+  #grilla {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 0;
+  }
+  section#textoQsomos {
+    text-align: center;
+    font-size: 18px;
+    font-family: sans-serif;
+    padding-right: 9px;
+  }
+  section#responsabilidad {
+    text-align: center;
+    font-size: 18px;
+    font-family: sans-serif;
+    padding-right: 9px;
+  }
+  section#responsabilidad > h1 {
+    border: 2px solid red;
+    font-size: 30px;
+  }
+  section#parrafo2 {
+    text-align: center;
+    font-size: 18px;
+    font-family: sans-serif;
+    padding-right: 9px;
+    line-height: 1.42857143;
+  }
 }
 
 /* footer*/
@@ -84,77 +251,38 @@ h3.titulo {
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
-/*Quienes somos*/
-#mainQs {
-  padding: 0px 25px 25px;
-}
-
-#mainQs .img1 {
-  text-align: center;
-  margin-bottom: 30px;
-  margin-left: 55px;
-  border: black solid 2px;
-}
-
-#grilla {
-  display: -ms-grid;
-  display: grid;
-  grid-gap: 20px;
-  -ms-grid-rows: (auto)[3];
-      grid-template-rows: repeat(3, auto);
-  -ms-grid-columns: (1fr)[2];
-      grid-template-columns: repeat(2, 1fr);
-      grid-template-areas: "textoQsomos imagenDerecha" "imagenIzquierda responsabilidad" "parrafo2 parrafo2";
-}
-
-section#textoQsomos {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-  grid-area: textoQsomos;
-  margin-left: 8%;
-  font-size: 15px;
-}
-
-section#imagenDerecha {
-  -ms-grid-row: 1;
-  -ms-grid-column: 2;
-  grid-area: imagenDerecha;
-  text-align: center;
-  padding-top: 23%;
-}
-
-section#imagenIzquierda {
-  -ms-grid-row: 2;
-  -ms-grid-column: 1;
-  grid-area: imagenIzquierda;
-  padding-left: 8%;
-  padding-top: 8%;
-}
-
-section#responsabilidad {
-  -ms-grid-row: 2;
-  -ms-grid-column: 2;
-  grid-area: responsabilidad;
-  padding-top: 10%;
-  font-size: 15px;
-  padding-right: 8%;
-}
-
-section#responsabilidad > h1 {
-  border: 2px solid red;
-  font-size: 30px;
-}
-
-section#parrafo2 {
-  -ms-grid-row: 3;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
-  grid-area: parrafo2;
-  padding-bottom: 3%;
-  padding-left: 8%;
-  padding-right: 8%;
-  font-size: 15px;
-  padding-top: 2%;
+@media screen and (max-width: 768px) {
+  #footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    height: 100%;
+    width: 100%;
+    padding-top: 2%;
+    padding-bottom: 5%;
+  }
+  .logoChico {
+    padding-left: 23%;
+  }
+  .footer1 h3 {
+    padding-left: 17%;
+  }
+  .footer2 h3 {
+    padding-left: 17%;
+  }
+  .icon {
+    text-align: center;
+  }
+  .footer2 p {
+    text-align: center;
+  }
 }
 
 /*Vision, mision y valores*/
@@ -165,6 +293,10 @@ section#parrafo2 {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+  height: 100%;
+  width: 100%;
+  padding-top: 5%;
+  padding-bottom: 5%;
 }
 
 .asideColor {
@@ -205,6 +337,30 @@ section#parrafo2 {
   padding-top: 25px;
 }
 
+@media screen and (max-width: 768px) {
+  #mainVision {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .asideColor {
+    background-color: white;
+    border: black;
+    margin: 10px;
+    width: 30%;
+    padding: 2px;
+  }
+  .colorLetras {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+/*productos*/
 #galeriaProductos .main__imagenes-fila1 {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -310,12 +466,105 @@ section#parrafo2 {
   color: #a1a2a6;
 }
 
+#galeriaProductos .main__imagenes-fila2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding-top: 80px;
+}
+
+#galeriaProductos .main__imagenes-fila3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding-top: 80px;
+}
+
+#galeriaProductos .modal_fila1-img1 {
+  margin-left: 150px;
+}
+
+@media screen and (max-width: 768px) {
+  #galeriaProductos {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    height: 100%;
+    width: 100%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+  }
+  .main__imagenes-fila1 {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    text-align: center;
+  }
+  .main__imagenes-fila1 .modal_fila1-img1 {
+    text-align: center;
+  }
+  .main__imagenes-fila2 {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    text-align: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .main__imagenes-fila3 {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    text-align: center;
+  }
+}
+
 /*contacto*/
 iframe {
   width: 100%;
 }
 
 .contact-form {
+  width: 100%;
+  height: 100%;
   text-align: center;
+}
+
+.form-validate {
+  width: 100%;
+  height: 100%;
+}
+
+/*edicion del header bs*/
+ul .dropdown-item:hover {
+  background-color: #a1a2a6;
+}
+
+/*modal responsive*/
+@media screen and (max-width: 768px) {
+  .modal-body {
+    padding-left: 80px;
+  }
+  #exampleModal .modal_fila1-img1 {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 /*# sourceMappingURL=estilos.css.map */

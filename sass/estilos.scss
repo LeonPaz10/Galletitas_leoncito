@@ -1,9 +1,17 @@
+@import "home";
+
+
+
+
+
 /*variables*/
+
 
 $color: black;
 $colorete: red;
 $altura: 300px;
 $paddingtop: 110px;
+
 
 @media (min-width: 1024px) {
   .nav_personalizada {
@@ -12,27 +20,106 @@ $paddingtop: 110px;
     width: 100%;
   }
 }
-
-/* Nuestros comienzos*/
-.FondoDeAtras {
-  background-image: url(http://www.galletitastrio.com.ar/assets/images/fondo_historia1.jpg);
-  position: relative;
-  height: 300px;
-  padding-top: 50px;
-  background-attachment: fixed;
-  background-position: top center;
-  background-size: cover;
+/*Quienes somos*/
+#mainQs {
+  padding: 0px 25px 25px;
 }
 
-h3.titulo {
+#mainQs .img1 {
+  width: 100%;
+  height: 100%;
   text-align: center;
-  color: white;
+  margin-bottom: 30px;
+  padding-top: 3%;
+  
+  
 }
-.FondoDeAtras p {
-  margin: 10px;
-  padding: 15px;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+
+#grilla {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-rows: repeat(3, auto);
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas:
+    "textoQsomos imagenDerecha"
+    "imagenIzquierda responsabilidad"
+    "parrafo2 parrafo2";
+}
+
+section#textoQsomos {
+  grid-area: textoQsomos;
+  margin-left: 8%;
+  font-size: 15px;
+}
+
+section#imagenDerecha {
+  grid-area: imagenDerecha;
+    text-align: center;
+    padding-top: 23%;
+}
+
+
+
+section#responsabilidad {
+  grid-area: responsabilidad;
+  padding-top: 10%;
+  font-size: 15px;
+  padding-right: 8%;
+}
+section#responsabilidad > h1 {
+  border: 2px solid $colorete;
+  font-size: 30px;
+}
+section#imagenIzquierda {
+  grid-area: imagenIzquierda;
+  padding-left: 5%;
+  padding-top: 8%;
+}
+
+section#parrafo2 {
+  grid-area: parrafo2;
+  padding-bottom: 3%;
+  padding-left: 8%;
+  padding-right: 8%;
+  font-size: 15px;
+  padding-top: 2%;
+}
+
+@media screen and (max-width: 768px){
+
+
+  #grilla{
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    
+    
+  }
+  
+  section#textoQsomos{
+    text-align: center;
+    font-size: 18px;
+    font-family: sans-serif;
+    padding-right: 9px;
+  }
+  section#responsabilidad {
+    text-align: center;
+    font-size: 18px;
+    font-family: sans-serif;
+    padding-right: 9px;
+  }
+  section#responsabilidad > h1 {
+    border: 2px solid $colorete;
+    font-size: 30px;
+  }
+  section#parrafo2 {
+    text-align: center;
+    font-size: 18px;
+    font-family:sans-serif ;
+    padding-right: 9px;
+    line-height: 1.42857143;
+  }
+  
 }
 
 /* footer*/
@@ -79,74 +166,54 @@ h3.titulo {
   color: $color;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    
 }
 
-/*Quienes somos*/
-#mainQs {
-  padding: 0px 25px 25px;
+
+
+@media screen and (max-width: 768px){
+  #footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    padding-top: 2%;
+    padding-bottom: 5%;
+  }
+
+  .logoChico{
+  padding-left: 23%;
+  }
+
+  .footer1 h3{
+  padding-left:17% ;
+  }
+
+  .footer2 h3{
+    padding-left: 17%;
+  }
+
+  .icon{
+    text-align: center;
+  }
+
+  .footer2 p{
+    text-align: center;
+  }
 }
 
-#mainQs .img1 {
-  text-align: center;
-  margin-bottom: 30px;
-  margin-left: 55px;
-  border: $color solid 2px;
-}
 
-#grilla {
-  display: grid;
-  grid-gap: 20px;
-  grid-template-rows: repeat(3, auto);
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-areas:
-    "textoQsomos imagenDerecha"
-    "imagenIzquierda responsabilidad"
-    "parrafo2 parrafo2";
-}
-
-section#textoQsomos {
-  grid-area: textoQsomos;
-  margin-left: 8%;
-  font-size: 15px;
-}
-
-section#imagenDerecha {
-  grid-area: imagenDerecha;
-  text-align: center;
-  padding-top: 23%;
-}
-
-section#imagenIzquierda {
-  grid-area: imagenIzquierda;
-  padding-left: 8%;
-  padding-top: 8%;
-}
-
-section#responsabilidad {
-  grid-area: responsabilidad;
-  padding-top: 10%;
-  font-size: 15px;
-  padding-right: 8%;
-}
-section#responsabilidad > h1 {
-  border: 2px solid $colorete;
-  font-size: 30px;
-}
-
-section#parrafo2 {
-  grid-area: parrafo2;
-  padding-bottom: 3%;
-  padding-left: 8%;
-  padding-right: 8%;
-  font-size: 15px;
-  padding-top: 2%;
-}
 
 /*Vision, mision y valores*/
 
 #mainVision {
   display: flex;
   flex: 1;
+  height: 100%;
+   width: 100%;
+   padding-top: 5%;
+   padding-bottom: 5%;
 }
 
 .asideColor {
@@ -182,6 +249,26 @@ section#parrafo2 {
     padding-top: 25px;
   }
 }
+@media screen and (max-width: 768px){
+  #mainVision{
+    display: flex;
+    flex-direction: column;
+  }
+  .asideColor {
+    background-color: white;
+   border: black;
+    margin: 10px;
+    width: 30%;
+    padding: 2px;
+  }
+  .colorLetras{
+    height: 100%;
+    width: 100%;
+  }
+
+}
+
+/*productos*/
 
 #galeriaProductos {
   .main__imagenes-fila1 {
@@ -268,6 +355,66 @@ section#parrafo2 {
       color: #a1a2a6;
     }
   }
+  .main__imagenes-fila2{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-top: 80px;
+
+  }
+  
+  .main__imagenes-fila3{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-top: 80px;
+
+  }
+
+  .modal_fila1-img1{
+    
+    margin-left: 150px;
+    
+    
+  }
+}
+
+@media screen and (max-width: 768px){
+  #galeriaProductos{
+   display: flex;
+   flex-direction: column;
+   flex-wrap: wrap;
+    height: 100%;
+    width: 100%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    
+  }
+  .main__imagenes-fila1{
+    flex-wrap: wrap;
+    text-align: center;
+    .modal_fila1-img1{
+      text-align: center;
+    }
+    
+    
+
+
+   
+
+  }
+  
+ .main__imagenes-fila2{
+   flex-wrap: wrap;
+   text-align: center;
+   justify-content: center;
+   
+ }
+  .main__imagenes-fila3{
+    flex-wrap: wrap;
+    text-align: center;
+  }
+
 }
 
 /*contacto*/
@@ -276,10 +423,46 @@ iframe{
   width:100%;
   
   
+  
 }
 
 .contact-form{
+  
+  width:100%;
+  height: 100%;
   text-align: center;
+  
 }
+.form-validate{
+  width:100%;
+  height: 100%;
+}
+
+/*edicion del header bs*/
+
+ul .dropdown-item:hover{
+  background-color:#a1a2a6;
+}
+
+/*modal responsive*/
+
+@media screen and (max-width: 768px){
+  .modal-body {
+    padding-left: 80px;
+  }
+ #exampleModal .modal_fila1-img1{
+   justify-content: center;
+   
+ }
+
+  
+} 
+
+
+
+
+
+
+
 
 
