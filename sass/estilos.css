@@ -1,0 +1,321 @@
+/*variables*/
+@media (min-width: 1024px) {
+  .nav_personalizada {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    width: 100%;
+  }
+}
+
+/* Nuestros comienzos*/
+.FondoDeAtras {
+  background-image: url(http://www.galletitastrio.com.ar/assets/images/fondo_historia1.jpg);
+  position: relative;
+  height: 300px;
+  padding-top: 50px;
+  background-attachment: fixed;
+  background-position: top center;
+  background-size: cover;
+}
+
+h3.titulo {
+  text-align: center;
+  color: white;
+}
+
+.FondoDeAtras p {
+  margin: 10px;
+  padding: 15px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+/* footer*/
+#footer {
+  padding-top: 0%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  background-color: #e3e3e3;
+  height: 3%;
+}
+
+.logoChico {
+  padding-top: 50px;
+}
+
+.footer1 h3 {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  color: #a1a2a6;
+}
+
+.footer1 p {
+  font-size: 15px;
+  color: black;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  text-align: center;
+}
+
+.footer1 a {
+  text-decoration: none;
+}
+
+.footer2 h3 {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  color: #a1a2a6;
+}
+
+.footer2 p {
+  font-size: 15px;
+  color: black;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+/*Quienes somos*/
+#mainQs {
+  padding: 0px 25px 25px;
+}
+
+#mainQs .img1 {
+  text-align: center;
+  margin-bottom: 30px;
+  margin-left: 55px;
+  border: black solid 2px;
+}
+
+#grilla {
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 20px;
+  -ms-grid-rows: (auto)[3];
+      grid-template-rows: repeat(3, auto);
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-areas: "textoQsomos imagenDerecha" "imagenIzquierda responsabilidad" "parrafo2 parrafo2";
+}
+
+section#textoQsomos {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: textoQsomos;
+  margin-left: 8%;
+  font-size: 15px;
+}
+
+section#imagenDerecha {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: imagenDerecha;
+  text-align: center;
+  padding-top: 23%;
+}
+
+section#imagenIzquierda {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: imagenIzquierda;
+  padding-left: 8%;
+  padding-top: 8%;
+}
+
+section#responsabilidad {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: responsabilidad;
+  padding-top: 10%;
+  font-size: 15px;
+  padding-right: 8%;
+}
+
+section#responsabilidad > h1 {
+  border: 2px solid red;
+  font-size: 30px;
+}
+
+section#parrafo2 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: parrafo2;
+  padding-bottom: 3%;
+  padding-left: 8%;
+  padding-right: 8%;
+  font-size: 15px;
+  padding-top: 2%;
+}
+
+/*Vision, mision y valores*/
+#mainVision {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.asideColor {
+  background-color: white;
+  border: black 1px solid;
+  margin: 10px;
+  width: 30%;
+  padding: 2px;
+}
+
+.colorLetras {
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 600px;
+}
+
+.colorLetras h2 {
+  color: #8d090f;
+  padding-left: 15px;
+}
+
+.colorLetras .vision {
+  padding-top: 20px;
+}
+
+.colorLetras p {
+  padding-left: 30px;
+  padding-right: 10px;
+  padding-top: 25px;
+}
+
+#galeriaProductos .main__imagenes-fila1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding-top: 80px;
+}
+
+#galeriaProductos .img1 {
+  width: 200x;
+  height: 150px;
+  /*alto de 150px*/
+  -webkit-transition: -webkit-transform .2s;
+  transition: -webkit-transform .2s;
+  transition: transform .2s;
+  transition: transform .2s, -webkit-transform .2s;
+}
+
+#galeriaProductos .img1:hover {
+  -webkit-transform: scale(1.6);
+          transform: scale(1.6);
+}
+
+#galeriaProductos .div__imagen1 .imagen1__texto {
+  padding-top: 50px;
+  /*padding de 50px*/
+  text-align: center;
+  font-size: 18px;
+  font-family: "Montserrat", sans-serif;
+  color: #a1a2a6;
+}
+
+#galeriaProductos .img2 {
+  width: 200x;
+  height: 150px;
+  -webkit-transition: -webkit-transform .2s;
+  transition: -webkit-transform .2s;
+  transition: transform .2s;
+  transition: transform .2s, -webkit-transform .2s;
+}
+
+#galeriaProductos .img2:hover {
+  -webkit-transform: scale(1.6);
+          transform: scale(1.6);
+}
+
+#galeriaProductos .div__imagen2 .imagen2__texto {
+  padding-top: 50px;
+  text-align: center;
+  font-size: 18px;
+  font-family: "Montserrat", sans-serif;
+  color: #a1a2a6;
+}
+
+#galeriaProductos .img3 {
+  width: 200x;
+  height: 150px;
+  -webkit-transition: -webkit-transform .2s;
+  transition: -webkit-transform .2s;
+  transition: transform .2s;
+  transition: transform .2s, -webkit-transform .2s;
+}
+
+#galeriaProductos .img3:hover {
+  -webkit-transform: scale(1.6);
+          transform: scale(1.6);
+}
+
+#galeriaProductos .div__imagen3 .imagen3__texto {
+  padding-top: 50px;
+  /*padding de 50px*/
+  text-align: center;
+  font-size: 18px;
+  font-family: "Montserrat", sans-serif;
+  color: #a1a2a6;
+}
+
+#galeriaProductos .img4 {
+  width: 200x;
+  height: 150px;
+  -webkit-transition: -webkit-transform .2s;
+  transition: -webkit-transform .2s;
+  transition: transform .2s;
+  transition: transform .2s, -webkit-transform .2s;
+}
+
+#galeriaProductos .img4:hover {
+  -webkit-transform: scale(1.6);
+          transform: scale(1.6);
+}
+
+#galeriaProductos .div__imagen4 .imagen4__texto {
+  padding-top: 50px;
+  /*padding de 50px*/
+  text-align: center;
+  font-size: 18px;
+  font-family: "Montserrat", sans-serif;
+  color: #a1a2a6;
+}
+
+/*contacto*/
+iframe {
+  width: 100%;
+}
+
+.contact-form {
+  text-align: center;
+}
+/*# sourceMappingURL=estilos.css.map */

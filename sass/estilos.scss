@@ -1,0 +1,285 @@
+/*variables*/
+
+$color: black;
+$colorete: red;
+$altura: 300px;
+$paddingtop: 110px;
+
+@media (min-width: 1024px) {
+  .nav_personalizada {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+  }
+}
+
+/* Nuestros comienzos*/
+.FondoDeAtras {
+  background-image: url(http://www.galletitastrio.com.ar/assets/images/fondo_historia1.jpg);
+  position: relative;
+  height: 300px;
+  padding-top: 50px;
+  background-attachment: fixed;
+  background-position: top center;
+  background-size: cover;
+}
+
+h3.titulo {
+  text-align: center;
+  color: white;
+}
+.FondoDeAtras p {
+  margin: 10px;
+  padding: 15px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+/* footer*/
+
+#footer {
+  padding-top: 0%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  justify-content: space-around;
+  background-color: #e3e3e3;
+  height: 3%;
+}
+
+.logoChico {
+  padding-top: 50px;
+}
+
+.footer1 h3 {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  color: #a1a2a6;
+}
+
+.footer1 p {
+  font-size: 15px;
+  color: black;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  text-align: center;
+}
+.footer1 a {
+  text-decoration: none;
+}
+
+.footer2 h3 {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  color: #a1a2a6;
+}
+
+.footer2 p {
+  font-size: 15px;
+  color: $color;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+/*Quienes somos*/
+#mainQs {
+  padding: 0px 25px 25px;
+}
+
+#mainQs .img1 {
+  text-align: center;
+  margin-bottom: 30px;
+  margin-left: 55px;
+  border: $color solid 2px;
+}
+
+#grilla {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-rows: repeat(3, auto);
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas:
+    "textoQsomos imagenDerecha"
+    "imagenIzquierda responsabilidad"
+    "parrafo2 parrafo2";
+}
+
+section#textoQsomos {
+  grid-area: textoQsomos;
+  margin-left: 8%;
+  font-size: 15px;
+}
+
+section#imagenDerecha {
+  grid-area: imagenDerecha;
+  text-align: center;
+  padding-top: 23%;
+}
+
+section#imagenIzquierda {
+  grid-area: imagenIzquierda;
+  padding-left: 8%;
+  padding-top: 8%;
+}
+
+section#responsabilidad {
+  grid-area: responsabilidad;
+  padding-top: 10%;
+  font-size: 15px;
+  padding-right: 8%;
+}
+section#responsabilidad > h1 {
+  border: 2px solid $colorete;
+  font-size: 30px;
+}
+
+section#parrafo2 {
+  grid-area: parrafo2;
+  padding-bottom: 3%;
+  padding-left: 8%;
+  padding-right: 8%;
+  font-size: 15px;
+  padding-top: 2%;
+}
+
+/*Vision, mision y valores*/
+
+#mainVision {
+  display: flex;
+  flex: 1;
+}
+
+.asideColor {
+  background-color: white;
+  border: black 1px solid;
+  margin: 10px;
+  width: 30%;
+  padding: 2px;
+}
+
+.colorLetras {
+  background-color: white;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 600px;
+}
+
+.colorLetras {
+  h2 {
+    color: #8d090f;
+    padding-left: 15px;
+  }
+
+  .vision {
+    padding-top: 20px;
+  }
+
+  p {
+    padding-left: 30px;
+    padding-right: 10px;
+    padding-top: 25px;
+  }
+}
+
+#galeriaProductos {
+  .main__imagenes-fila1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-top: 80px;
+  }
+
+  .img1 {
+    width: 200x;
+    height: $altura/2; /*alto de 150px*/
+    transition: transform .2s;
+  
+  }
+  .img1:hover{
+    transform: scale(1.6); 
+  }
+  .div__imagen1 {
+    .imagen1__texto {
+      padding-top: ($paddingtop/2)-5; /*padding de 50px*/
+      text-align: center;
+      font-size: 18px;
+      font-family: "Montserrat", sans-serif;
+      color: #a1a2a6;
+    }
+  }
+  .img2 {
+    width: 200x;
+    height: 150px;
+    transition: transform .2s;
+  }
+  .img2:hover{
+    transform: scale(1.6);
+
+  }
+  .div__imagen2 {
+    .imagen2__texto {
+      padding-top: 50px;
+      text-align: center;
+      font-size: 18px;
+      font-family: "Montserrat", sans-serif;
+      color: #a1a2a6;
+    }
+  }
+  .img3 {
+    width: 200x;
+    height: 150px;
+    transition: transform .2s;
+  }
+
+  .img3:hover{
+    transform: scale(1.6);
+
+  }
+
+  .div__imagen3 {
+    .imagen3__texto {
+      padding-top: ($paddingtop/2)-5; /*padding de 50px*/
+      text-align: center;
+      font-size: 18px;
+      font-family: "Montserrat", sans-serif;
+      color: #a1a2a6;
+    }
+  }
+
+  .img4 {
+    width: 200x;
+    height: 150px;
+    transition: transform .2s;
+
+  }
+  .img4:hover{
+    transform: scale(1.6);
+
+  }
+
+  .div__imagen4 {
+    .imagen4__texto {
+      padding-top: ($paddingtop/2)-5; /*padding de 50px*/
+      text-align: center;
+      font-size: 18px;
+      font-family: "Montserrat", sans-serif;
+      color: #a1a2a6;
+    }
+  }
+}
+
+/*contacto*/
+
+iframe{
+  width:100%;
+  
+  
+}
+
+.contact-form{
+  text-align: center;
+}
+
+
